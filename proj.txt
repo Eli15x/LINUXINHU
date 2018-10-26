@@ -1,16 +1,36 @@
--->Script com Menu : Lisa.
+echo "---------------------------------------"
+echo " "
+echo "--------Grupos-------"
+echo " "
+echo "1 - Criar novo grupo."
+echo "2 - Alterar o nome de um grupo criado."
+echo " "
+echo "--------Usuário--------"   
+echo "3 - Criar novo usuário."
+echo " "
+echo "------Permissões-------"
+echo " "
+echo "4 - Modificar o dono de um arquivo ou diretório."
+echo "5 - Modificar o grupo do dono de um arquivo ou diretório."
+echo "6 - Modificar as permissões de um grupo ou diretório separadamente"
+echo "para o dono,para o grupo e para outros."
+echo " "
+echo "---------------------------------------"
+echo "digite o Número do que você quer fazer:"
+read numero
 
-----fukinha---
+if [ $numero = 1 ]
+then
 
-1) Grupo ->criar grupo                         
-	 ->alterar o nome de um grupo j� criado
+#implementação do caso criar novo grupo
+echo "b"
 
---- elisinha
-
-2) Usuario->criar usuario.
-
+fi
 
 
-3) a discutir
+if [ $numero = 2 ]
+then
+echo "a"
+#implementação do caso alterar o nome de um grupo criado
 
-
+fi
