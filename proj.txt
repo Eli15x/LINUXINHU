@@ -1,0 +1,16 @@
+-->Script com Menu : Lisa.
+
+----fukinha---
+
+1) Grupo ->criar grupo                         
+	 ->alterar o nome de um grupo já criado
+
+--- elisinha
+
+2) Usuario->criar usuario.
+
+
+
+3) a discutir
+
+
