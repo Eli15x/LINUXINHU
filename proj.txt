@@ -1,7 +1,9 @@
-while [ true ]; do
 
-echo "---------------------------------------"
-echo " "
+#Lembrar executar arquivo cd até o diretorio depois ./proj.txt
+#lembrar alterar permissoes chmod +x (execução) proj.txt
+
+while [ true ]; do
+clear
 echo "--------Grupos-------"
 echo " "
 echo "1 - Criar novo grupo."
@@ -21,6 +23,7 @@ echo "---------------------------------------"
 echo "digite o Número do que você quer fazer:"
 
 read opcao_escolhida
+clear
 case $opcao_escolhida in
 
   1) echo "Qual será o nome do novo grupo?"
@@ -63,9 +66,16 @@ case $opcao_escolhida in
 
 
   4) 
-     echo "Selecione o caminho para o arquivo com a seguinte sintaxe"
+     echo "(ESSE COMANDO NÃO FUNCIONA COM PASTA ROOT OU ARQUIVOS DENTRO DELA!)"
+     echo " "
+     echo "Sintaxe para caminho do arquivo:"
      echo "(nomeX/nomeY/NomeZ.txt ->se arquivo)"
-     echo "nomeX/nomeY/NomeZ ->se diretório)"
+     echo "(nomeX/nomeY/NomeZ ->se diretório) :"
+     echo "Caso o arquivo esteja no sistema de arquivos sintaxe será:"
+     echo "(/nomeX/nomeY...)"
+     echo " "
+     echo "Selecione o caminho para o arquivo com a seguinte sintaxe" 
+     
      read caminho
      echo "Quem será o novo dono desse arquivo ou diretório?"
      read usuario
