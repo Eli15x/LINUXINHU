@@ -1,3 +1,5 @@
+while [ true ]; do
+
 echo "---------------------------------------"
 echo " "
 echo "--------Grupos-------"
@@ -13,20 +15,11 @@ echo " "
 echo "4 - Modificar o dono de um arquivo ou diretório."
 echo "5 - Modificar o grupo do dono de um arquivo ou diretório."
 echo "6 - Modificar as permissões de um grupo ou diretório separadamente"
-echo "para o dono,para o grupo e para outros."
+echo "para o dono,para o grupo e para outros:"
 echo " "
 echo "---------------------------------------"
 echo "digite o Número do que você quer fazer:"
-read numero
 
-if [ $numero = 1 ]
-then
-
-while [ true ]; do
-echo
-echo "1 Criar grupo"
-echo "2 Alterar o nome de um grupo"
-echo "3 Sair"
 read opcao_escolhida
 case $opcao_escolhida in
 
@@ -59,17 +52,50 @@ case $opcao_escolhida in
   read
   ;;
 
-  3) break
-  ;;
-  
-  *) ;;
+  3)
+     echo "Qual o Nome do novo usuário?"
+     read nomeUsuario
+     adduser $nomeUsuario
+     echo "Usuário criado com sucesso"
+     echo "Pressione [ENTER] para voltar"  
+     read
+     ;;
+
+
+  4) 
+     echo "Selecione o caminho para o arquivo com a seguinte sintaxe"
+     echo "(nomeX/nomeY/NomeZ.txt ->se arquivo)"
+     echo "nomeX/nomeY/NomeZ ->se diretório)"
+     read caminho
+     echo "Quem será o novo dono desse arquivo ou diretório?"
+     read usuario
+     chown $usuario $caminho
+     echo "Dono do arquivo/diretório modificado com sucesso"
+     echo "Pressione [ENTER] para voltar"  
+     read
+     ;;
+     
+
+  5) echo "Pressione [ENTER] para voltar"  
+     read
+     ;;
+ 
+  6) 
+     echo "--------------------------------------------"
+     echo "Oque você deseja dar ao dono/usuario/grupo?"
+     echo "1)Nenhuma permissão"
+     echo "2)Execução"
+     echo "3)Escrita"
+     echo "4)Escrita e execução"
+     echo "5)Leitura"
+     echo "6)Leitura e execução"
+     echo "7)Leitura e escrita"
+     echo "8)Leitura,escrita e execução"
+     echo "Digite o número correspondente:"
+     read opcao
+      
+     
+
 esac
 done
   
-
-if [ $numero = 2 ]
-then
-echo "a"
-#implementação do caso alterar o nome de um grupo criado
-
-fi
