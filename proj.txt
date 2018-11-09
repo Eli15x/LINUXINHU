@@ -22,11 +22,50 @@ read numero
 if [ $numero = 1 ]
 then
 
-#implementação do caso criar novo grupo
-echo "b"
+while [ true ]; do
+echo
+echo "1 Criar grupo"
+echo "2 Alterar o nome de um grupo"
+echo "3 Sair"
+read opcao_escolhida
+case $opcao_escolhida in
 
-fi
+  1) echo "Qual será o nome do novo grupo?"
+  read nomeGrupo
+  groupadd $nomeGrupo
+  echo
+  echo "Grupo '$nomeGrupo' criado com sucesso! (Caso não tenha mostrado uma mensagem de erro acima)"
+  echo
+  echo "Pressione [ENTER] para voltar"
+  read
+  ;;
 
+  2) /etc/group 
+  echo 
+  echo "Grupos existentes acima"
+  echo
+  echo "Deseja alterar o nome de qual grupo?"
+  read nomeGrupoAlterar
+  echo
+  echo "Qual será o novo nome?"
+  read nomeGrupoNovo
+  
+  groupmod -n $nomeGrupoNovo $nomeGrupoAlterar
+  
+  echo
+  echo "Nome de grupo alterado com sucesso para $nomeGrupoNovo (Caso não tenha mostrado uma mensagem de erro acima)"
+  echo
+  echo "Pressione [ENTER] para voltar"
+  read
+  ;;
+
+  3) break
+  ;;
+  
+  *) ;;
+esac
+done
+  
 
 if [ $numero = 2 ]
 then
