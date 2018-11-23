@@ -86,7 +86,16 @@ case $opcao_escolhida in
      ;;
      
 
-  5) echo "Pressione [ENTER] para voltar"  
+  5) echo
+     echo "Qual o arquivo/diretorio que você deseja modificar o grupo dono?"
+     read nomeArquivo
+     echo "Qual o novo grupo dono do arquivo?
+     read novoGrupo
+     
+     chgrp $novoGrupo $nomeArquivo  
+     echo "Grupo dono do arquivo/diretório modificado com sucesso" 
+     echo
+     echo "Pressione [ENTER] para voltar"
      read
      ;;
  
