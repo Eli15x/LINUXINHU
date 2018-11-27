@@ -126,19 +126,21 @@ case $opcao in
       read
       ;;   
 
-   2) echo "Pressione [ENTER] para voltar"
+   2) chmod $opcao_tipo+x arquivo
+      echo "Pressione [ENTER] para voltar"
       read
        ;;   
 
 
 
-   3)  echo "Pressione [ENTER] para voltar"
+   3) chmod $opcao_tipo+w arquivo 
+      echo "Pressione [ENTER] para voltar"
       read
       ;;   
 
 
 
-   4) 
+   4) chmod $opcao_tipo+wx arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
