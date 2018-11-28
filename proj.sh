@@ -20,7 +20,7 @@ echo "6 - Modificar as permissões de um grupo ou diretório separadamente"
 echo "para o dono,para o grupo e para outros:"
 echo " "
 echo "---------------------------------------"
-echo "digite o Número do que você quer fazer:"
+echo "Digite o número do que você quer fazer:"
 
 read opcao_escolhida
 clear
@@ -30,7 +30,7 @@ case $opcao_escolhida in
   read nomeGrupo
   groupadd $nomeGrupo
   echo
-  echo "Grupo '$nomeGrupo' criado com sucesso! (Caso não tenha mostrado uma mensagem de erro acima)"
+  echo "Grupo '$nomeGrupo' criado com sucesso!"
   echo
   echo "Pressione [ENTER] para voltar"
   read
@@ -49,14 +49,14 @@ case $opcao_escolhida in
   groupmod -n $nomeGrupoNovo $nomeGrupoAlterar
   
   echo
-  echo "Nome de grupo alterado com sucesso para $nomeGrupoNovo (Caso não tenha mostrado uma mensagem de erro acima)"
+  echo "Nome de grupo alterado com sucesso para $nomeGrupoNovo"
   echo
   echo "Pressione [ENTER] para voltar"
   read
   ;;
 
   3)
-     echo "Qual o Nome do novo usuário?"
+     echo "Qual o nome do novo usuário?"
      read nomeUsuario
      adduser $nomeUsuario
      echo "Usuário criado com sucesso"
@@ -89,7 +89,7 @@ case $opcao_escolhida in
   5) echo
      echo "Qual o arquivo/diretorio que você deseja modificar o grupo dono?"
      read nomeArquivo
-     echo "Qual o novo grupo dono do arquivo?
+     echo "Qual o novo grupo dono do arquivo?"
      read novoGrupo
      
      chgrp $novoGrupo $nomeArquivo  
@@ -99,10 +99,10 @@ case $opcao_escolhida in
      read
      ;;
  
- 6)  echo "Digite o caminho que deseja mudar a permissão:(ex. /eu/eula.txt)"
+ 6)  echo "Digite o caminho que deseja mudar a permissão:ex. /eu/eula.txt"
      read arquivo
      echo "--------------------------------------------"
-     echo "A quem voce deseja dar permissão? (g/u/o). g para grupo,"
+     echo "A quem voce deseja dar permissão? g/u/o. g para grupo,"
      echo "u pra usuario e o para outros"
      read  opcao_tipo
      echo "Oque você deseja dar ao dono/usuario/grupo?"
@@ -116,69 +116,41 @@ case $opcao_escolhida in
      echo "8 - Leitura,escrita e execução"
      echo "Digite o número correspondente:"
      read opcao
-
 echo "$opcao_tipo"
 case $opcao in
  
-
    1) chmod $opcao_tipo-rwx arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-
    2) chmod $opcao_tipo+x arquivo
       echo "Pressione [ENTER] para voltar"
       read
        ;;   
-
-
-
    3) chmod $opcao_tipo+w arquivo 
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-
-
-
    4) chmod $opcao_tipo+wx arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-
-
-
    5) chmod $opcao_tipo+r arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-
-
-
    6) chmod $opcao_tipo+rx arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-
-
-
    7) chmod $opcao_tipo+rw arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-
-
-
    8) chmod $opcao_tipo+rwx arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-
 esac
-
 esac
 done
-
-
-
-
-
