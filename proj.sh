@@ -119,35 +119,35 @@ case $opcao_escolhida in
 echo "$opcao_tipo"
 case $opcao in
  
-   1) chmod $opcao_tipo-rwx arquivo
+   1) chmod $opcao_tipo-rwx $arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-   2) chmod $opcao_tipo+x arquivo
+   2) chmod $opcao_tipo+x $arquivo
       echo "Pressione [ENTER] para voltar"
       read
        ;;   
-   3) chmod $opcao_tipo+w arquivo 
+   3) chmod $opcao_tipo+w $arquivo 
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-   4) chmod $opcao_tipo+wx arquivo
+   4) chmod $opcao_tipo+wx $arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-   5) chmod $opcao_tipo+r arquivo
+   5) chmod $opcao_tipo+r $arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-   6) chmod $opcao_tipo+rx arquivo
+   6) chmod $opcao_tipo+rx $arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-   7) chmod $opcao_tipo+rw arquivo
+   7) chmod $opcao_tipo+rw $arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
-   8) chmod $opcao_tipo+rwx arquivo
+   8) chmod $opcao_tipo+rwx $arquivo
       echo "Pressione [ENTER] para voltar"
       read
       ;;   
